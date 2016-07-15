@@ -27,9 +27,15 @@ namespace Assets.Scripts.UI
 		{
 			UIManager.Instance.DeactivateUILayer(UILayerType.LOBBY);
 			UIManager.Instance.ActivateUILayer(UILayerType.GAME);
+			if( null != this._idInputField )
+			{
+				PlayerPrefs.SetString("ID", this._idInputField.text);
+			}
 		}
 		
 		[SerializeField]
 		private Button _gotoGameButton = null;
+		[SerializeField]
+		private InputField _idInputField = null;
 	}
 }
