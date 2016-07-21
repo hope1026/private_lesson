@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.UI;
+using Assets.Scripts.Scene;
 
 namespace Assets.Scripts.UI
 {
@@ -25,17 +26,10 @@ namespace Assets.Scripts.UI
 
 		private void _HanldeOnClickGotoGame()
 		{
-			UIManager.Instance.DeactivateUILayer(UILayerType.LOBBY);
-			UIManager.Instance.ActivateUILayer(UILayerType.GAME);
-			if( null != this._idInputField )
-			{
-				PlayerPrefs.SetString("ID", this._idInputField.text);
-			}
+			SceneManager.Instance.ChangeSceneRequest(SceneType.GAME);
 		}
 		
 		[SerializeField]
 		private Button _gotoGameButton = null;
-		[SerializeField]
-		private InputField _idInputField = null;
 	}
 }

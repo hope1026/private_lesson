@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Assets.Scripts.UI
+namespace Assets.Scripts.Scene
 {
-	public enum UILayerType
+	public enum SceneType
 	{
-		GAME,
-		GAME_LOADING,
-		LOBBY,
+		GAME = 0,
 		LOGIN,
+		LOBBY,
 		MAX,
 		NONE = MAX,
 	}
