@@ -12,12 +12,8 @@ namespace Assets.Scripts.Game
 
 		public void HandleOnEnterGame()
 		{
-			if( null != WorldManager.Instance.rootComponent && null != WorldManager.Instance.rootComponent.playerSpawn )
-			{
-				GameObject playerGO = WorldManager.Instance.rootComponent.playerSpawn.Spawn();
-				UserManager.Instance.SetUserGameObject(playerGO);
-				UserManager.Instance.SetPlayerCamera(WorldManager.Instance.rootComponent.playerCamera);
-			}
+			_SpawnPlayer();
+			_SpawnEnemies();
 		}
 		public void HandleOnExitGame()
 		{
@@ -33,6 +29,29 @@ namespace Assets.Scripts.Game
 		}
 		public void UpdatePost()
 		{
+		}
+
+		private void _SpawnPlayer()
+		{
+			if (null != WorldManager.Instance.rootComponent && null != WorldManager.Instance.rootComponent.playerSpawn)
+			{
+				GameObject playerGO = WorldManager.Instance.rootComponent.playerSpawn.Spawn();
+				UserManager.Instance.SetUserGameObject(playerGO);
+				UserManager.Instance.SetPlayerCamera(WorldManager.Instance.rootComponent.playerCamera);
+			}
+		}
+		private void _SpawnEnemies()
+		{
+			if (null != WorldManager.Instance.rootComponent && null != WorldManager.Instance.rootComponent.enemySpawnList)
+			{
+				foreach(WCEnemySpawn enemySpawn in WorldManager.Instance.rootComponent.enemySpawnList )
+				{
+					if( null != enemySpawn )
+					{
+						enemySpawn.Spawn();
+					}
+				}
+			}
 		}
 		
 		#region SINGLETON

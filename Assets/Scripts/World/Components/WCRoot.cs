@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -15,12 +16,21 @@ namespace Assets.Scripts.World
 
 			if( null != this.worldGO )
 			{
-				this.playerSpawn = this.worldGO.GetComponentInChildren<WCPlayerSpawn>();
 				this.playerCamera = this.worldGO.GetComponentInChildren<Camera>();
+				this.playerSpawn = this.worldGO.GetComponentInChildren<WCPlayerSpawn>();
+
+				this.enemySpawnList = new List<WCEnemySpawn>();
+				this.enemySpawnList.AddRange(this.worldGO.GetComponentsInChildren<WCEnemySpawn>());
 			}
 		}
 		public void TerminateWorldGameObject()
 		{
+			if (null != this.enemySpawnList)
+			{
+				this.enemySpawnList.Clear();
+				this.enemySpawnList = null;
+			}
+
 			if( null != this.worldGO )
 			{
 				GameObject.Destroy(this.worldGO);
@@ -33,6 +43,7 @@ namespace Assets.Scripts.World
 
 		public GameObject worldGO { get; private set; }
 		public WCPlayerSpawn playerSpawn { get; private set; }
+		public List<WCEnemySpawn> enemySpawnList { get; private set; }
 		public Camera playerCamera { get; private set; }
 	}
 }
