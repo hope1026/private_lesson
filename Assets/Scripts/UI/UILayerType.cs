@@ -9,6 +9,7 @@ namespace Assets.Scripts.UI
 	{
 		GAME,
 		GAME_LOADING,
+		GAME_PAUSE,
 		LOBBY,
 		LOGIN,
 		MAX,

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Assets.Scripts.World;
 using Assets.Scripts.User;
+using Assets.Scripts.UI;
 
 namespace Assets.Scripts.Game
 {
@@ -17,10 +18,22 @@ namespace Assets.Scripts.Game
 		}
 		public void HandleOnExitGame()
 		{
-
 		}
 		public void UpdatePre()
 		{
+			if (true == Input.GetKeyUp(KeyCode.Escape))
+			{
+				if( UIManager.Instance.currentActiveLayerType == UILayerType.GAME )
+				{
+					UIManager.Instance.DeactivateUILayer(UILayerType.GAME);
+					UIManager.Instance.ActivateUILayer(UILayerType.GAME_PAUSE);
+				}
+				else if (UIManager.Instance.currentActiveLayerType == UILayerType.GAME_PAUSE)
+				{
+					UIManager.Instance.DeactivateUILayer(UILayerType.GAME_PAUSE);
+					UIManager.Instance.ActivateUILayer(UILayerType.GAME);
+				}
+			}
 			UserManager.Instance.UpdateCustomPre();
 		}
 		public void Update()

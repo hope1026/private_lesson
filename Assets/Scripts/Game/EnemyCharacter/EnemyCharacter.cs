@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Assets.Scripts.Utility;
 
 namespace Assets.Scripts.Game
 {
@@ -30,7 +31,17 @@ namespace Assets.Scripts.Game
 					particle.transform.position = base.transform.position;
 					particle.transform.rotation = base.transform.rotation;
 					particle.Play();
+					AutoDestory particleAutoDestory = base.gameObject.AddComponent<AutoDestory>();
+					if (null != particleAutoDestory)
+					{
+						particleAutoDestory.StartAutoDestory(3f);
+					}
 				}
+			}
+			AutoDestory enemyAutoDestory = base.gameObject.AddComponent<AutoDestory>();
+			if( null != enemyAutoDestory )
+			{
+				enemyAutoDestory.StartAutoDestory(3f);
 			}
 		}
 
