@@ -591,11 +591,69 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
-      transformMask: []
+      events:
+      - time: 0.056950707
+        functionName: HandlePlayAttack
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: d62e177a82418c048ada7422e844e405,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.355743
+        functionName: HandlePlayAttack
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: d62e177a82418c048ada7422e844e405,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.65160364
+        functionName: HandlePlayAttack
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: d62e177a82418c048ada7422e844e405,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: micro_dragon
+        weight: 1
+      - path: micro_dragon_clean:eyes
+        weight: 1
+      - path: micro_dragon_clean:root_drag
+        weight: 1
+      - path: micro_dragon_clean:root_drag/micro_dragon_clean:body_drag
+        weight: 1
+      - path: micro_dragon_clean:root_drag/micro_dragon_clean:body_drag/micro_dragon_clean:head_drag
+        weight: 1
+      - path: micro_dragon_clean:root_drag/micro_dragon_clean:body_drag/micro_dragon_clean:head_drag/micro_dragon_clean:brows_drag
+        weight: 1
+      - path: micro_dragon_clean:root_drag/micro_dragon_clean:body_drag/micro_dragon_clean:head_drag/micro_dragon_clean:eyes_drag
+        weight: 1
+      - path: micro_dragon_clean:root_drag/micro_dragon_clean:body_drag/micro_dragon_clean:head_drag/micro_dragon_clean:left_wing_drag
+        weight: 1
+      - path: micro_dragon_clean:root_drag/micro_dragon_clean:body_drag/micro_dragon_clean:head_drag/micro_dragon_clean:right_wing_drag
+        weight: 1
+      - path: micro_dragon_clean:root_drag/micro_dragon_clean:body_drag/micro_dragon_clean:head_drag/micro_dragon_clean:snout_drag
+        weight: 1
+      - path: micro_dragon_clean:root_drag/micro_dragon_clean:body_drag/micro_dragon_clean:left_shoulder_drag
+        weight: 1
+      - path: micro_dragon_clean:root_drag/micro_dragon_clean:body_drag/micro_dragon_clean:left_shoulder_drag/micro_dragon_clean:left_arm_drag
+        weight: 1
+      - path: micro_dragon_clean:root_drag/micro_dragon_clean:body_drag/micro_dragon_clean:right_shoulder_drag
+        weight: 1
+      - path: micro_dragon_clean:root_drag/micro_dragon_clean:body_drag/micro_dragon_clean:right_shoulder_drag/micro_dragon_clean:right_arm_drag
+        weight: 1
+      - path: micro_dragon_clean:root_drag/micro_dragon_clean:body_drag/micro_dragon_clean:tail_drag
+        weight: 1
+      - path: micro_dragon_clean:tongue
+        weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 0.96
     - serializedVersion: 16
       name: dragon_dizzy
       takeName: 
@@ -663,7 +721,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -676,10 +734,44 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: micro_dragon
+        weight: 1
+      - path: micro_dragon_clean:eyes
+        weight: 1
+      - path: micro_dragon_clean:root_drag
+        weight: 1
+      - path: micro_dragon_clean:root_drag/micro_dragon_clean:body_drag
+        weight: 1
+      - path: micro_dragon_clean:root_drag/micro_dragon_clean:body_drag/micro_dragon_clean:head_drag
+        weight: 1
+      - path: micro_dragon_clean:root_drag/micro_dragon_clean:body_drag/micro_dragon_clean:head_drag/micro_dragon_clean:brows_drag
+        weight: 1
+      - path: micro_dragon_clean:root_drag/micro_dragon_clean:body_drag/micro_dragon_clean:head_drag/micro_dragon_clean:eyes_drag
+        weight: 1
+      - path: micro_dragon_clean:root_drag/micro_dragon_clean:body_drag/micro_dragon_clean:head_drag/micro_dragon_clean:left_wing_drag
+        weight: 1
+      - path: micro_dragon_clean:root_drag/micro_dragon_clean:body_drag/micro_dragon_clean:head_drag/micro_dragon_clean:right_wing_drag
+        weight: 1
+      - path: micro_dragon_clean:root_drag/micro_dragon_clean:body_drag/micro_dragon_clean:head_drag/micro_dragon_clean:snout_drag
+        weight: 1
+      - path: micro_dragon_clean:root_drag/micro_dragon_clean:body_drag/micro_dragon_clean:left_shoulder_drag
+        weight: 1
+      - path: micro_dragon_clean:root_drag/micro_dragon_clean:body_drag/micro_dragon_clean:left_shoulder_drag/micro_dragon_clean:left_arm_drag
+        weight: 1
+      - path: micro_dragon_clean:root_drag/micro_dragon_clean:body_drag/micro_dragon_clean:right_shoulder_drag
+        weight: 1
+      - path: micro_dragon_clean:root_drag/micro_dragon_clean:body_drag/micro_dragon_clean:right_shoulder_drag/micro_dragon_clean:right_arm_drag
+        weight: 1
+      - path: micro_dragon_clean:root_drag/micro_dragon_clean:body_drag/micro_dragon_clean:tail_drag
+        weight: 1
+      - path: micro_dragon_clean:tongue
+        weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 0.96
     isReadable: 1
   meshes:
     lODScreenPercentages: []
