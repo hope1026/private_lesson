@@ -85,10 +85,16 @@ namespace Assets.Scripts.Game
 		public void HandlePlayAttack()
 		{
 			Debug.Log("Atttack Event");
+			if( null != _attackAudio )
+			{
+				this._attackAudio.Play();
+			}
 		}
 
 		[SerializeField]
 		private ParticleSystem _destoryParticleObject = null;
+		[SerializeField]
+		private AudioSource _attackAudio = null;
 		private Animator _animator = null;
 		private NavMeshAgent _navMeshAgent = null;
 		private float _nextMoveStartTime = 0f;
